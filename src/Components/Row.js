@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import axios from "./axios"; // default import from our file axios.
+import axios from "../axios"; // default import from our file axios.
 
 import "./Row.css";
 import YouTube from "react-youtube";
@@ -52,7 +52,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
 				  const urlParams = new URLSearchParams(new URL(url).search);
 				  setTrailerUrl(urlParams.get('v'));
 			  })
-			  .catch(err => console.err(err));  
+			  .catch(err => console.error(err));  
 		}
   };
 
